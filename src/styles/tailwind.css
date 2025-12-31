@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: #FEFEFE;
+    --color-foreground: #1E293B;
+    --color-card: #FFFFFF;
+    --color-card-foreground: #1E293B;
+    --color-popover: #FFFFFF;
+    --color-popover-foreground: #1E293B;
+    --color-primary: #1E40AF;
+    --color-primary-foreground: #FFFFFF;
+    --color-secondary: #475569;
+    --color-secondary-foreground: #FFFFFF;
+    --color-muted: #F8FAFC;
+    --color-muted-foreground: #64748B;
+    --color-accent: #F59E0B;
+    --color-accent-foreground: #1E293B;
+    --color-destructive: #DC2626;
+    --color-destructive-foreground: #FFFFFF;
+    --color-success: #059669;
+    --color-success-foreground: #FFFFFF;
+    --color-warning: #D97706;
+    --color-warning-foreground: #FFFFFF;
+    --color-error: #DC2626;
+    --color-error-foreground: #FFFFFF;
+    --color-border: #E2E8F0;
+    --color-input: #E2E8F0;
+    --color-ring: #1E40AF;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --color-background: #0F172A;
+    --color-foreground: #F1F5F9;
+    --color-card: #1E293B;
+    --color-card-foreground: #F1F5F9;
+    --color-popover: #1E293B;
+    --color-popover-foreground: #F1F5F9;
+    --color-primary: #3B82F6;
+    --color-primary-foreground: #FFFFFF;
+    --color-secondary: #64748B;
+    --color-secondary-foreground: #FFFFFF;
+    --color-muted: #1E293B;
+    --color-muted-foreground: #94A3B8;
+    --color-accent: #F59E0B;
+    --color-accent-foreground: #F1F5F9;
+    --color-destructive: #EF4444;
+    --color-destructive-foreground: #FFFFFF;
+    --color-success: #10B981;
+    --color-success-foreground: #FFFFFF;
+    --color-warning: #F59E0B;
+    --color-warning-foreground: #FFFFFF;
+    --color-error: #EF4444;
+    --color-error-foreground: #FFFFFF;
+    --color-border: #334155;
+    --color-input: #334155;
+    --color-ring: #3B82F6;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .header {
+    @apply fixed top-0 left-0 right-0 z-40 bg-card shadow-md;
+  }
+
+  .header-container {
+    @apply flex items-center justify-between h-16 px-6;
+  }
+
+  .header-logo {
+    @apply flex items-center gap-3;
+  }
+.header-logo-icon  {
+    @apply w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300;
+  }
+
+  .header-logo-text {
+    @apply text-xl font-semibold text-foreground;
+  }
+
+  .header-nav {
+    @apply hidden lg:flex items-center gap-1;
+  }
+
+  .header-nav-link {
+    @apply px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-all duration-300;
+  }
+.header-nav-link.active  {
+    @apply text-primary;
+  }
+
+  .header-actions {
+    @apply flex items-center gap-3;
+  }
+
+  .mobile-menu-button {
+    @apply lg:hidden fixed top-4 right-4 z-50 p-2 bg-card rounded-lg shadow-md;
+  }
+
+  .mobile-menu-overlay {
+    @apply fixed inset-0 z-40 bg-background lg:hidden;
+  }
+
+  .mobile-menu-content {
+    @apply flex flex-col h-full pt-20 px-6;
+  }
+
+  .mobile-menu-nav {
+    @apply flex flex-col gap-2;
+  }
+
+  .mobile-menu-link {
+    @apply px-4 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-all duration-300;
+  }
+.mobile-menu-link.active  {
+    @apply text-primary;
+  }
+
+  .breadcrumb {
+    @apply flex items-center gap-2 text-sm text-muted-foreground;
+  }
+
+  .breadcrumb-item {
+    @apply flex items-center gap-2;
+  }
+
+  .breadcrumb-link {
+    @apply hover:text-foreground transition-colors duration-300;
+  }
+.breadcrumb-separator  {
+    
+  }
+}
