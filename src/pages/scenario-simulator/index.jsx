@@ -12,7 +12,7 @@ import EdgeCaseAnalysis from './components/EdgeCaseAnalysis';
 import SimulationResults from './components/SimulationResults';
 
 const ScenarioSimulator = () => {
-  const [activeTab, setActiveTab] = useState('scenarios');
+  const [activeTab, setActiveTab] = useState('edge-cases');
   const [selectedScenario, setSelectedScenario] = useState(null);
   const [showResults, setShowResults] = useState(false);
 
@@ -140,10 +140,10 @@ const ScenarioSimulator = () => {
   };
 
   const tabs = [
-    { id: 'scenarios', label: 'Scenarios', icon: 'Play' },
+    // { id: 'scenarios', label: 'Scenarios', icon: 'Play' },
     { id: 'comparison', label: 'Comparison', icon: 'GitCompare' },
-    { id: 'emergency', label: 'Emergency', icon: 'AlertTriangle' },
-    { id: 'historical', label: 'Historical Data', icon: 'BarChart3' },
+    // { id: 'emergency', label: 'Emergency', icon: 'AlertTriangle' },
+    // { id: 'historical', label: 'Historical Data', icon: 'BarChart3' },
     { id: 'edge-cases', label: 'Edge Cases', icon: 'AlertCircle' }
   ];
 
