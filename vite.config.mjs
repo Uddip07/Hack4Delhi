@@ -14,5 +14,5 @@ export default defineConfig(({ mode }) => ({
     port: 4028,
     host: "localhost",
     strictPort: true,
-  }
+  },
 }));

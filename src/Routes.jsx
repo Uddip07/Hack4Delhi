@@ -12,7 +12,6 @@ import Homepage from './pages/homepage';
 
 const Routes = () => {
   return (
-    <BrowserRouter>
       <ErrorBoundary>
       <ScrollToTop />
       <RouterRoutes>
@@ -27,7 +26,6 @@ const Routes = () => {
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>
-    </BrowserRouter>
   );
 };
 

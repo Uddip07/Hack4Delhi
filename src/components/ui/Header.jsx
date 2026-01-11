@@ -12,7 +12,7 @@ const Header = () => {
     { path: '/homepage', label: 'Home', icon: 'Home' },
     { path: '/learn-hub', label: 'Learn Hub', icon: 'BookOpen' },
     { path: '/verify-center', label: 'Verify Center', icon: 'ShieldCheck' },
-    { path: '/constitutional-visualizer', label: 'Visualizer', icon: 'Eye' },
+    // { path: '/constitutional-visualizer', label: 'Visualizer', icon: 'Eye' },
     { path: '/scenario-simulator', label: 'Simulator', icon: 'Layers' },
   ];
 
